@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -26,12 +27,7 @@ export default function HomePage() {
       {/* Navigation */}
       <nav className="relative z-10 flex items-center justify-between p-6 border-b border-border">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-accent rounded-none flex items-center justify-center hard-shadow">
-            <Sparkles className="w-4 h-4 text-accent-foreground" />
-          </div>
-          <span className="font-semibold text-lg text-foreground">
-            DevPlatform
-          </span>
+          <span className="font-semibold text-lg text-foreground">Kite</span>
         </div>
 
         <div className="hidden md:flex items-center gap-8">
@@ -76,9 +72,25 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative z-10 px-6 py-24 text-center">
+      <section className="relative z-10 px-6 py-24 text-center min-h-[65vh] md:min-h-[75vh] lg:min-h-[85vh] flex items-center">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+          <Image
+            src="/kite-landing--1.png"
+            alt=""
+            fill
+            priority
+            aria-hidden="true"
+            className="object-cover object-top mask-radial-bottom"
+          />
+          {/* Optional readability overlay */}
+          <div className="absolute inset-0 radial-bottom-overlay" />
+        </div>
         <div className="max-w-4xl mx-auto">
-          <Badge variant="secondary" className="mb-6 rounded-none clean-border">
+          <Badge
+            variant="secondary"
+            className="mb-6 rounded-none shadow-md clean-border"
+          >
             Not Backed by
             <img
               src="https://www.vectorlogo.zone/logos/ycombinator/ycombinator-icon.svg"
@@ -87,15 +99,12 @@ export default function HomePage() {
             />
           </Badge>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance text-foreground">
-            The complete platform to{" "}
-            <span className="text-accent">build the web</span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance text-foreground whitespace-nowrap">
+            Kite: Beyond the Conflicts
           </h1>
 
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
-            Your team's toolkit to stop configuring and start innovating.
-            Securely build, deploy, and scale the best web experiences with
-            modern tools.
+            The first step towards an invisible version control.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -191,7 +200,7 @@ export default function HomePage() {
               <Button
                 variant="outline"
                 size="sm"
-                className="rounded-none clean-border bg-transparent"
+                className="hover:translate-y-0.5 hover:cursor-pointer rounded-none clean-border bg-transparent"
               >
                 Watch Demo
               </Button>
@@ -549,11 +558,8 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-accent rounded-none flex items-center justify-center hard-shadow">
-                <Sparkles className="w-4 h-4 text-accent-foreground" />
-              </div>
               <span className="font-semibold text-lg text-foreground">
-                DevPlatform
+                Kite
               </span>
             </div>
 
@@ -574,7 +580,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            © 2025 DevPlatform. Built with modern web technologies.
+            © 2025 Kite. Built with modern web technologies.
           </div>
         </div>
       </footer>
