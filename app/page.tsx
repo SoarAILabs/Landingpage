@@ -20,72 +20,27 @@ import {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen gradient-bg">
+    <div className="min-h-screen gradient-bg relative">
       {/* Checkered Pattern Background */}
       <div className="fixed inset-0 checkered-pattern opacity-30" />
 
-      {/* Navigation */}
-      <nav className="relative z-10 flex items-center justify-between p-4">
-        <div className="flex items-center gap-2">
-          <span className="font-semibold text-lg text-foreground">Kite</span>
-        </div>
-
-        <div className="hidden md:flex items-center gap-8">
-          <a
-            href="#"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Product
-          </a>
-          <a
-            href="#"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Pricing
-          </a>
-          <a
-            href="#"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Docs
-          </a>
-          <a
-            href="#"
-            className="text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Blog
-          </a>
-        </div>
-
-        <div className="flex items-center gap-4">
-          <Button variant="ghost" size="sm">
-            Sign In
-          </Button>
-          <Button
-            size="sm"
-            className="rounded-none hard-shadow hard-shadow-hover"
-          >
-            Get Started
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="relative z-10 px-6 py-24 text-center min-h-[65vh] md:min-h-[75vh] lg:min-h-[85vh] flex items-center">
-        {/* Hero Background Image */}
-        <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+      {/* Hero Background Image - extends behind all sections */}
+      <div className="absolute top-0 left-0 right-0 h-[150vh] z-[1] pointer-events-none overflow-hidden">
+        <div className="relative w-full h-full">
           <Image
-            src="/kite-landing--1.png"
+            src="/kitelandingimage.webp"
             alt=""
             fill
             priority
             aria-hidden="true"
-            className="object-cover object-top mask-radial-bottom"
+            className="object-cover object-center"
+            style={{ objectPosition: "center 10%" }}
           />
-          {/* Optional readability overlay */}
-          <div className="absolute inset-0 radial-bottom-overlay" />
         </div>
+      </div>
+
+      {/* Hero Section */}
+      <section className="relative z-10 px-6 py-24 text-center min-h-[65vh] md:min-h-[75vh] lg:min-h-[85vh] flex items-center">
         <div className="max-w-4xl mx-auto">
           <Badge
             variant="secondary"
@@ -96,12 +51,16 @@ export default function HomePage() {
               src="https://www.vectorlogo.zone/logos/ycombinator/ycombinator-icon.svg"
               alt="YC"
               className="w-4 h-4 ml-1 mr-1"
-            />
+            />{" "}
+            yet
           </Badge>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance text-foreground whitespace-nowrap">
-            Kite: Beyond the Conflicts
+            Soar AI Labs
           </h1>
+          <h2 className="text-3xl font-bold mb-6 text-balance text-foreground whitespace-nowrap">
+            Beyond the Conflicts
+          </h2>
 
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
             The first step towards an invisible version control.
@@ -559,7 +518,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
               <span className="font-semibold text-lg text-foreground">
-                Kite
+                Soar AI Labs
               </span>
             </div>
 
@@ -580,7 +539,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-8 pt-8 text-center text-sm text-muted-foreground">
-            © 2025 Kite. Built with modern web technologies.
+            © 2025 Soar AI Labs. Built with modern web technologies.
           </div>
         </div>
       </footer>
