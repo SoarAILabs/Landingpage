@@ -27,8 +27,72 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-6 py-16">
+    <div className="min-h-screen w-full bg-[#f9fafb] relative">
+      {/* Diagonal Fade Grid Background - Top Left */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, #d1d5db 1px, transparent 1px),
+            linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+          `,
+          backgroundSize: "32px 32px",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 60% 60% at 0% 0%, #000 20%, transparent 60%)",
+          maskImage:
+            "radial-gradient(ellipse 60% 60% at 0% 0%, #000 20%, transparent 60%)",
+        }}
+      />
+
+      {/* Diagonal Fade Grid Background - Top Right */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, #d1d5db 1px, transparent 1px),
+            linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+          `,
+          backgroundSize: "32px 32px",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 60% 60% at 100% 0%, #000 20%, transparent 60%)",
+          maskImage:
+            "radial-gradient(ellipse 60% 60% at 100% 0%, #000 20%, transparent 60%)",
+        }}
+      />
+
+      {/* Diagonal Fade Bottom Grid Left Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, #d1d5db 1px, transparent 1px),
+            linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+          `,
+          backgroundSize: "32px 32px",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 60% 60% at 0% 100%, #000 20%, transparent 60%)",
+          maskImage:
+            "radial-gradient(ellipse 60% 60% at 0% 100%, #000 20%, transparent 60%)",
+        }}
+      />
+
+      {/* Diagonal Fade Bottom Grid Right Background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, #d1d5db 1px, transparent 1px),
+            linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+          `,
+          backgroundSize: "32px 32px",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 60% 60% at 100% 100%, #000 20%, transparent 60%)",
+          maskImage:
+            "radial-gradient(ellipse 60% 60% at 100% 100%, #000 20%, transparent 60%)",
+        }}
+      />
+
+      <div className="relative z-10 max-w-4xl mx-auto px-6 py-16">
         <Link href="/blog">
           <Button variant="ghost" className="mb-8 rounded-none clean-border">
             <ArrowLeft className="w-4 h-4 mr-2" />
