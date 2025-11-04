@@ -101,7 +101,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </Link>
 
         <article>
-          <Card className="rounded-none clean-border hard-shadow p-8 md:p-12">
+          <Card className="rounded-md clean-border hard-shadow p-8 md:p-12">
             <header className="mb-8">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 {post.title}
