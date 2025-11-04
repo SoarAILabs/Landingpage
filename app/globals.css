@@ -13,7 +13,7 @@
   --secondary: oklch(0.96 0 0);
   --secondary-foreground: oklch(0.15 0 0);
   --muted: oklch(0.96 0 0);
-  --muted-foreground: oklch(0.45 0 0);
+  --muted-foreground: oklch(0.65 0.12 260);
   --accent: oklch(0.95 0 0);
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
@@ -26,7 +26,7 @@
   --chart-3: oklch(0.65 0.18 280);
   --chart-4: oklch(0.75 0.15 60);
   --chart-5: oklch(0.68 0.16 320);
-  --radius: 0rem;
+  --radius: 1rem;
   --sidebar: oklch(0.98 0 0);
   --sidebar-foreground: oklch(0.15 0 0);
   --sidebar-primary: oklch(0.95 0 0);
@@ -87,7 +87,7 @@
 }
 
 .gradient-bg {
-  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  background: linear-gradient(to top, rgb(138, 191, 255) 0%, rgba(138, 191, 255, 0.9) 15%, rgba(138, 191, 255, 0.7) 30%, rgba(138, 191, 255, 0.5) 45%, rgba(138, 191, 255, 0.3) 60%, rgba(255, 255, 255, 0.7) 75%, rgba(255, 255, 255, 0.9) 90%, #ffffff 100%);
 }
 
 .hard-shadow {
@@ -111,4 +111,26 @@
 
 .radial-bottom-overlay {
   background: radial-gradient(120% 85% at 50% 100%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.7) 85%);
+}
+
+/* Pro card glow effects */
+.glow-base {
+  opacity: 1;
+}
+
+/* Hover effect when hovering on Pro card - gradual smooth brightening */
+.pricing-grid:has(.glow-trigger:hover) [data-pro-glow] {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(138, 191, 255, 1) 0%,
+    rgba(138, 191, 255, 0.95) 12%,
+    rgba(138, 191, 255, 0.85) 22%,
+    rgba(138, 191, 255, 0.7) 35%,
+    rgba(138, 191, 255, 0.55) 48%,
+    rgba(138, 191, 255, 0.42) 60%,
+    rgba(138, 191, 255, 0.3) 72%,
+    rgba(138, 191, 255, 0.2) 82%,
+    rgba(138, 191, 255, 0.12) 90%,
+    transparent 96%
+  ) !important;
 }
