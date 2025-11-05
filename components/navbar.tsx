@@ -13,7 +13,7 @@ import Link from "next/link";
 export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 p-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between backdrop-blur-lg bg-white/10 border border-white/20 rounded-full shadow-lg px-6 py-3">
+      <div className="max-w-[80vw] mx-auto flex items-center justify-between backdrop-blur-lg bg-white/10 border border-white/20 rounded-full shadow-lg px-6 py-3">
         <div className="flex items-center gap-2">
           <span className="font-semibold text-lg text-foreground">
             <Link

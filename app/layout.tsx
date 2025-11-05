@@ -2,7 +2,8 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Inter, Instrument_Sans } from "next/font/google";
 import { Suspense } from "react";
-import { Navbar } from "@/components/navbar";
+import { RootProvider } from "fumadocs-ui/provider/next";
+import { ConditionalNavbar } from "@/components/conditional-navbar";
 import "./globals.css";
 
 const inter = Inter({
@@ -17,7 +18,7 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Kite - Beyond the Conflicts",
+  title: "Soar AI Labs - Beyond the Conflicts",
 };
 
 export default function RootLayout({
@@ -26,10 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${instrumentSans.className} antialiased`}>
-        <Navbar />
-        <Suspense fallback={null}>{children}</Suspense>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${instrumentSans.className} antialiased flex flex-col min-h-screen`}
+      >
+        <RootProvider>
+          <ConditionalNavbar />
+          <Suspense fallback={null}>{children}</Suspense>
+        </RootProvider>
       </body>
     </html>
   );

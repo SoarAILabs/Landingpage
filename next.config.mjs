@@ -1,3 +1,5 @@
+import { createMDX } from 'fumadocs-mdx/next';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -11,4 +13,8 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+const withMDX = createMDX({
+  configPath: './source.config.ts',
+});
+
+export default withMDX(nextConfig);
