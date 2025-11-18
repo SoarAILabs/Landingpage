@@ -12,7 +12,14 @@ const TermsPage = () => {
             Revisions from Nov 18, 2025
           </p>
           <p className="text-sm text-muted-foreground">
-            See full edit history on GitHub
+            <a
+              href="https://github.com/SoarAILabs/soarailabs-landingpage/commits/soarailabs/legal"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-2"
+            >
+              See full edit history on GitHub
+            </a>
           </p>
           
         </header>
