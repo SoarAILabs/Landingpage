@@ -303,7 +303,7 @@ const TermsPage = () => {
           <p className="text-muted-foreground">
             For legal or terms‑related questions, contact us at{" "}
             <a
-              href="mailto:legal@soarailabs.com"
+              href="mailto:the.kite.squad@protonmail.com"
               className="underline underline-offset-2"
             >
               the.kite.squad@protonmail.com
