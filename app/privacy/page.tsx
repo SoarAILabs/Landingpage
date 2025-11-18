@@ -2,11 +2,11 @@ import React from "react";
 
 const PrivacyPage = () => {
   return (
-    <div className="min-h-screen gradient-bg relative -mt-20 md:-mt-24 pt-20 md:pt-24 px-6">
+    <div className="min-h-screen relative -mt-20 md:-mt-24 pt-20 md:pt-24 px-6">
       <main className="max-w-4xl mx-auto pb-16">
         <header className="mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Privacy Policy 
+            Privacy Policy
           </h1>
           <p className="text-sm text-muted-foreground">
             Revision from November 18, 2025
@@ -29,19 +29,19 @@ const PrivacyPage = () => {
             <li>
               <span className="font-semibold">Company:</span> “Soarailabs”,
               “Soar AI Labs”, “we”, or “us” refers to the maintainers and
-              operators of the Soarailabs open source projects and any
+              operators of the Soar AI Labsopen source projects and any
               associated hosted services.
             </li>
             <li>
               <span className="font-semibold">Maintainers:</span> Core
-              contributors/developers who operate Soarailabs infrastructure,
+              contributors/developers who operate Soar AI Labs's infrastructure,
               websites, and managed offerings (if any).
             </li>
             <li>
-              <span className="font-semibold">Software/Services:</span>{" "}
-              Soarailabs tools, Glide MCP, merge conflict resolver, semantic
-              commit splitter, context engines, any hosted APIs, and affiliated
-              open source projects.
+              <span className="font-semibold">Software/Services:</span> Soar AI
+              Labs tools, Glide MCP, merge conflict resolver, semantic commit
+              splitter, context engines, any hosted APIs, and affiliated open
+              source projects.
             </li>
             <li>
               <span className="font-semibold">Website:</span> soarailabs.com and
@@ -137,8 +137,8 @@ const PrivacyPage = () => {
             </p>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
               <li>
-                This data stays within your environment and is not sent to
-                Soarailabs by default.
+                This data stays within your environment and is not sent to Soar
+                AI Labs by default.
               </li>
               <li>
                 Any processing of that data by third‑party providers (for
@@ -214,10 +214,12 @@ const PrivacyPage = () => {
           </p>
           <ul className="list-disc list-inside space-y-2 text-muted-foreground">
             <li>Git hosting platforms (e.g., GitHub).</li>
-            <li>LLM providers (e.g., Cerebras).</li>
-            <li>Embedding/vector providers (e.g., VoyageAI).</li>
+            <li>LLM providers (e.g., Cerebras Systems Inc).</li>
             <li>
-              Graph databases or infrastructure (e.g., Helix, if used via
+              Embedding/vector providers (e.g., Voyage AI Innovations, Inc.).
+            </li>
+            <li>
+              Graph databases or infrastructure (e.g., HelixDB, if used via
               hosted endpoints).
             </li>
             <li>Hosting, CDNs, or analytics providers.</li>
@@ -230,7 +232,7 @@ const PrivacyPage = () => {
             policies.
           </p>
           <p className="text-muted-foreground">
-            Soarailabs does not receive or control those data flows unless we
+            Soar AI Labs does not receive or control those data flows unless we
             are operating the third‑party service ourselves as part of a managed
             offering.
           </p>
@@ -303,9 +305,7 @@ const PrivacyPage = () => {
               your own environment and configurations.
             </li>
             <li>
-              <span className="font-semibold">
-                Hosted or managed Services:
-              </span>{" "}
+              <span className="font-semibold">Hosted or managed Services:</span>{" "}
               We retain data only as long as necessary to provide the service,
               comply with legal obligations, or resolve disputes. Where
               feasible, we will document retention periods in service‑specific
@@ -330,7 +330,7 @@ const PrivacyPage = () => {
             restrict certain processing.
           </p>
           <p className="text-muted-foreground">
-            If you believe Soarailabs holds personal data about you (for
+            If you believe Soar AI Labs holds personal data about you (for
             example, from a hosted account, support interaction, or newsletter),
             you may contact us to request:
           </p>
@@ -349,7 +349,7 @@ const PrivacyPage = () => {
             Legal Basis and Jurisdiction
           </h2>
           <p className="text-muted-foreground">
-            Soarailabs is operated from [your jurisdiction]. By using our
+            Soar AI Labs is operated from [your jurisdiction]. By using our
             Website or any hosted Services, you consent to the processing and
             transfer of information as described in this policy, subject to
             applicable law.
