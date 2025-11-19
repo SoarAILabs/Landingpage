@@ -7,29 +7,52 @@ description: Learn how to install Glide MCP on your system
 
 Before installing Glide MCP, make sure you have the following:
 
-- Node.js 18+ installed
-- Git configured on your system
+- **Python 3.13+** and `uv` package manager
+- **Git** installed and configured
+- **Ollama** installed locally (required for merge conflict resolution)
+  - Install: [https://ollama.ai](https://ollama.ai)
+  - Pull the model: `ollama pull hf.co/SoarAILabs/breeze-3b:Q4_K_M`
 
-## Installation Steps
+## Installation Methods
 
-### Step 1: Download Glide MCP
+You can install Glide MCP in your favorite editor.
 
-```bash
-npm install kite
+### Cursor
+
+The easiest way to install Glide in Cursor is using the one-click install button:
+
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=glide-mcp&config=eyJlbnYiOnsiVk9ZQUdFQUlfQVBJX0tFWSI6IiIsIkhFTElYX0FQSV9FTkRQT0lOVCI6IiIsIkNFUkVCUkFTX0FQSV9LRVkiOiIiLCJDRVJFQlJBU19NT0RFTF9JRCI6InF3ZW4tMy0zMmIiLCJIRUxJWF9MT0NBTCI6IkZhbHNlIiwiTU9SUEhMTE1fQVBJX0tFWSI6IiJ9LCJjb21tYW5kIjoidXZ4IC0tZnJvbSBnaXQraHR0cHM6Ly9naXRodWIuY29tL1NvYXJBSUxhYnMvZ2xpZGUuZ2l0IGdsaWRlIn0%3D)
+
+### Claude Code
+
+To add Glide to Claude Code, run the following command in your terminal:
+
+```zsh
+claude mcp add --transport stdio glide-mcp --env VOYAGEAI_API_KEY= --env HELIX_API_ENDPOINT= --env CEREBRAS_API_KEY= --env CEREBRAS_MODEL_ID=qwen-3-32b --env HELIX_LOCAL= --env MORPHLLM_API_KEY= -- uvx --from  "git+https://github.com/SoarAILabs/glide.git" "glide"
 ```
 
-### Step 2: Configure
+### VS Code
 
-Follow the setup wizard to configure Glide MCP for your project.
+For VS Code, you can add the following configuration to your `mcp.json` file:
 
-### Step 3: Verify Installation
-
-```bash
-kite --version
+```json
+{
+  "glide-mcp": {
+    "env": {
+      "VOYAGEAI_API_KEY": "",
+      "HELIX_API_ENDPOINT": "",
+      "CEREBRAS_API_KEY": "",
+      "CEREBRAS_MODEL_ID": "qwen-3-32b",
+      "HELIX_LOCAL": "False",
+      "MORPHLLM_API_KEY": ""
+    },
+    "command": "uvx",
+    "args": ["--from", "git+https://github.com/SoarAILabs/glide.git", "glide"]
+  }
+}
 ```
 
 ## Next Steps
 
-- [Getting Started](/docs)
 - [Configuration](/docs/guides/configuration)
-
+- [API Overview](/docs/api/overview)
