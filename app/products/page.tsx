@@ -161,9 +161,11 @@ const ProductsPage = () => {
                           </ul>
                         </div>
                         <div className="pt-2">
-                          <Button className="w-full" variant="outline">
-                            Learn More
-                          </Button>
+                          <a href="https://soarailabs.com/docs#what-is-glide">
+                            <Button className="w-full" variant="outline">
+                              Learn More
+                            </Button>
+                          </a>
                         </div>
                       </CardContent>
                     </Card>
