@@ -1,18 +1,50 @@
 ---
 title: API Overview
-description: Glide API documentation
+description: Glide MCP Tools Documentation
 ---
 
-## API Reference
+## Available Tools
 
-Welcome to the Glide API documentation.
+Glide exposes the following tools via the Model Context Protocol (MCP). We are mindful of the number of tools we expose to your coding IDE's LLMs. 
 
-## Available Endpoints
+### `split_commit`
 
-- `/api/split_commit` - Split commits based on semantic code understanding
-- `/api/resolve_conflcit` - Resolve conflicts
+Splits a large unified diff / commit into smaller semantically-grouped commits.
+
+**Parameters:**
+
+- `workspace_root` (string, optional): Path to the workspace root directory. If not provided, attempts to detect it from environment variables or the current directory.
+
+**Usage:**
+
+This tool analyzes your staged and unstaged changes, generates embeddings for the diffs, and uses AI to propose and create semantic commits.
+
+### `resolve_conflict`
+
+Detects merge conflicts in the repository, resolves them using AI, and applies the changes with MorphLLM.
+
+**Parameters:**
+
+- `workspace_root` (string, optional): Path to the workspace root directory.
+
+**Behavior:**
+
+1. Detects files with merge conflicts.
+2. Uses a local LLM (via Ollama) to resolve the conflict [This will change with our hosted inference service in the near future].
+3. Uses MorphLLM to apply the resolution to the file.
+4. Writes the changes immediately.
+5. Returns a preview of the resolution.
+
+### `revert_conflict_resolution`
+
+Reverts the resolved conflict files back to their original state with conflicts. Use this if you want to undo the changes applied by `resolve_conflict`.
+
+**Parameters:**
+
+- `file_path` (string, optional): Path to a specific file to revert.
+- `workspace_root` (string, optional): Path to the workspace root directory.
+- `revert_all` (boolean, default: `false`): If `true`, reverts all pending resolutions.
 
 ## Authentication
 
-All API requests require authentication. See [Authentication](/docs/api/authentication) for details.
-
+Authentication is handled via the environment variables configured in your MCP client. See [Configuration](/docs/guides/configuration) for details.

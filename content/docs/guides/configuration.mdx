@@ -3,19 +3,45 @@ title: Configuration
 description: Configure Glide MCP for your project
 ---
 
-## Configuration Options
+## Environment Variables
 
-Glide can be configured through a `kite.config.js` file in your project root.
+Glide is configured using environment variables. You can set these in your MCP client configuration (like `mcp.json` or Cursor settings).
 
-## Basic Configuration
+### Required Variables
 
-```javascript
-module.exports = {
-  // Your configuration here
-};
+| Variable | Description |
+|----------|-------------|
+| `VOYAGEAI_API_KEY` | API key for [Voyage AI](https://dash.voyageai.com/) (used for embeddings). |
+| `HELIX_API_ENDPOINT` | Endpoint for the Helix API. See [Getting Access](#getting-access). |
+| `CEREBRAS_API_KEY` | API key for [Cerebras](https://cloud.cerebras.ai/) inference. |
+| `MORPHLLM_API_KEY` | API key for [MorphLLM](https://www.morphllm.com/) (used for applying code edits). |
+
+### Optional Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `CEREBRAS_MODEL_ID` | The model ID to use for Cerebras. | `qwen-3-32b` |
+| `HELIX_LOCAL` | Set to `True` to use a local Helix instance. | `False` |
+
+## Getting Access
+
+Some features (Helix) require API keys that are currently in closed beta.
+- **Access Request**: Contact us for access at `bilwarad@mail.uc.edu` or on Discord:
+  - Amaan: `amaanwastaken`
+  - Ani: `aniruddg`
+  - Vish: `vishesh.1301`
+
+## Example Configuration
+
+Here is an example of how the environment variables look in a JSON configuration:
+
+```json
+"env": {
+  "VOYAGEAI_API_KEY": "your_voyage_key",
+  "HELIX_API_ENDPOINT": "your_helix_endpoint",
+  "CEREBRAS_API_KEY": "your_cerebras_key",
+  "CEREBRAS_MODEL_ID": "qwen-3-32b",
+  "HELIX_LOCAL": "False",
+  "MORPHLLM_API_KEY": "your_morphllm_key"
+}
 ```
-
-## Advanced Settings
-
-For more advanced configuration options, see the [API Reference](/docs/api).
-
