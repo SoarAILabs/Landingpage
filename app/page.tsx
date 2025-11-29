@@ -212,7 +212,7 @@ export default function HomePage() {
                 <li>Showcase your projects and get feedback</li>
               </ul>
               <a
-                href="https://discord.gg/YOUR_INVITE"
+                href="https://discord.gg/zaYsTEqh"
                 className="inline-block mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 focus:outline-none"
                 aria-label="Join our Discord"
                 rel="noopener noreferrer"
